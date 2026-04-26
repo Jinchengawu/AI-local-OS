@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1",
+  "title": "web3-fe-superpowers 默认编排示例",
+  "notes": "复制到业务仓库 .cursor/superpowers-pipeline.json 并按团队裁剪。Agent 须在会话中显式 Read 本文件后，再按 steps/triggers 对齐门禁顺序。install-web3-skills 在缺失时会从模板首次落盘（不覆盖已有文件）。",
+  "steps": [
+    {
+      "id": "using-skills",
+      "skillDirectory": "using-skills",
+      "after": [],
+      "description": "会话入口：工具与 skill 调用约定"
+    },
+    {
+      "id": "writing-plans",
+      "skillDirectory": "writing-plans",
+      "after": ["using-skills"],
+      "description": "复杂任务先出计划"
+    },
+    {
+      "id": "verification-before-completion",
+      "skillDirectory": "verification-before-completion",
+      "after": ["using-skills"],
+      "description": "交付前自检"
+    },
+    {
+      "id": "commit",
+      "skillDirectory": "commit",
+      "after": ["verification-before-completion"],
+      "description": "提交信息约定"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "each-turn-gate",
+      "kind": "each_agent_turn",
+      "stepIds": ["using-skills"],
+      "notes": "与团队 AGENTS.md 门禁对齐；若冲突参见 local-skills.registry degradation"
+    },
+    {
+      "id": "before-complete",
+      "kind": "before_task_completion",
+      "stepIds": ["verification-before-completion"],
+      "notes": "完成用户任务前过验证 skill"
+    },
+    {
+      "id": "pre-commit",
+      "kind": "before_git_commit",
+      "stepIds": ["commit", "verification-before-completion"],
+      "notes": "提交前可叠加 requesting-code-review（按需加入 stepIds）"
+    }
+  ]
+}

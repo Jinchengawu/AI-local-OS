@@ -1,0 +1,35 @@
+# AI-local-OS — Hermes 多实例注册表（模板）
+# 使用说明：复制本文件为 hermes-instances.local.yaml（或你团队约定文件名），填写真实 baseUrl；
+# API Key 仅通过环境变量注入 OpenClaw 插件，勿将密钥写入 YAML 并提交仓库。
+
+version: 1
+defaults:
+  timeoutMs: 60000
+  # 熔断：连续失败次数达阈值时暂时跳过该实例（由 OpenClaw 插件实现）
+  circuitBreaker:
+    failureThreshold: 3
+    coolDownSec: 120
+
+instances:
+  - id: hermes-life
+    label: "个人生活心智"
+    baseUrl: "http://127.0.0.1:8001" # 占位：按实际 Hermes 监听地址修改
+    tags: ["life", "habits", "preferences"]
+    timeoutMs: 60000
+    notes: "日常陪伴、琐事与偏好记忆"
+
+  - id: hermes-dev
+    label: "编程开发心智"
+    baseUrl: "http://127.0.0.1:8002"
+    tags: ["dev", "repo", "ci", "code_style"]
+    timeoutMs: 120000
+    notes: "项目记忆、代码风格、运维流程"
+
+  - id: hermes-research
+    label: "行业研究心智"
+    baseUrl: "http://127.0.0.1:8003"
+    tags: ["research", "industry", "memo"]
+    timeoutMs: 120000
+    notes: "调研复盘、观点沉淀"
+
+  # 按需追加实例；每个实例应独立端口与独立持久化存储（见设计规格 §4）
