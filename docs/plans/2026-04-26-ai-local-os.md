@@ -109,7 +109,8 @@
 
 ## 阶段 2：产品与接线推进（方案 A 延续）
 
-> 目标：补齐真实产品信息与可运行接线，不虚构 API。执行中同步更新侧车 REQ 与下方勾选。
+> 目标：补齐真实产品信息与可运行接线，不虚构 API。执行中同步更新侧车 REQ 与下方勾选。  
+> **用户确认（2026-04-28）**：继续按 **方案 A** 落地（见 REQ「A 方案显式确认」与 [integration-handoff.md §0](../ai-local-os/integration-handoff.md)）。
 
 **入口文档（单一 SSOT）：** [docs/ai-local-os/integration-handoff.md](../ai-local-os/integration-handoff.md)
 

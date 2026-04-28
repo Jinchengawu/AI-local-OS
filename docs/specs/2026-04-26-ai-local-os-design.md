@@ -3,6 +3,7 @@
 > **需求 ID**：REQ-2026-0426-ai-local-os  
 > **事实来源**：仓库根目录《AI-local-OS：OpenClaw+Hermes 私有化本地智能操作系统方案》PDF  
 > **本轮落地路径**：**方案 A — 纯集成编排**（配置约定 + 文档 + 模板；无自研运行时）  
+> **用户确认（2026-04-28）**：按 **A** 方案落地；执行载体为 [integration-handoff.md](../ai-local-os/integration-handoff.md)（含 §0 速览）。  
 > **关联**：侧车 [debug/superpowers-intent/REQ-2026-0426-ai-local-os.md](../../debug/superpowers-intent/REQ-2026-0426-ai-local-os.md)；集成索引 [docs/ai-local-os/README.md](../ai-local-os/README.md)
 
 ---

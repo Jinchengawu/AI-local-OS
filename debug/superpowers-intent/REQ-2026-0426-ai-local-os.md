@@ -10,7 +10,7 @@
 | **PR** | （待填） |
 | **负责人** | （待填） |
 | **创建时间** | 2026-04-26 |
-| **最后更新** | 2026-04-28（新增 milestones-roadmap；与 handoff/README/规格回链） |
+| **最后更新** | 2026-04-28（用户明确「按 A 落地」；更新方案门禁记录） |
 
 ## 规格与计划（回链）
 
@@ -21,6 +21,7 @@
 | 集成模板索引 | [docs/ai-local-os/README.md](../../docs/ai-local-os/README.md) |
 | 阶段 2 移交清单 | [docs/ai-local-os/integration-handoff.md](../../docs/ai-local-os/integration-handoff.md) |
 | 里程碑路线图 | [docs/ai-local-os/milestones-roadmap.md](../../docs/ai-local-os/milestones-roadmap.md) |
+| pnpm 多包（Node） | [docs/ai-local-os/monorepo-packages.md](../../docs/ai-local-os/monorepo-packages.md) |
 
 ## 产品与 API 文档链接（粘贴区）
 
@@ -38,7 +39,8 @@
 | **执行授权** | 用户会话指令：按《AI-local-OS 落地计划（与当前方案对齐版）》**Implement the plan** 实施；未修改 Plan 文件本体。 |
 | **推荐 vs 已选** | 下文「候选方案」中的文字**仅为选型参考**，**不构成已选定**；已选定项以本表为准。 |
 | **本轮已选定** | **方案 A — 纯集成编排**（文档 + 路由表 + 实例模板 + `.env.example`；无薄网关代码、无 IaC 目录交付）。 |
-| **说明** | 单条执行消息未出现字母 B/C；若需升级为 **B** 或 **C**，请另条消息明确 **「选定方案：B」** 等后再开迭代。 |
+| **A 方案显式确认** | **2026-04-28** 用户指令：**「按 A 方案进行落地」** — 继续仅执行方案 A 范围；不启动 B/C 实现与 IaC 目录交付。 |
+| **说明** | 若需升级为 **B** 或 **C**，请另条消息明确 **「选定方案：B」** / **「选定方案：C」**（或混合）后再开迭代。 |
 
 ## 意图 SSOT（当前对齐）
 

@@ -1,0 +1,15 @@
+{
+  "name": "@ai-local-os/hermes-agent",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Hermes Agent 安装编排（官方以 Python/安装脚本为主；本包用 Node 脚本封装引导）",
+  "type": "module",
+  "scripts": {
+    "bootstrap": "node ./scripts/bootstrap.mjs",
+    "doctor": "node ./scripts/doctor.mjs",
+    "install-help": "node -e \"console.log('官方安装: curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\\n文档: https://hermes-agent.nousresearch.com/')\""
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  }
+}
